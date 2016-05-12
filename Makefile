@@ -12,8 +12,8 @@ build:
 	${DOCKER} build --tag=${IMAGE} .
 
 push:
-	${DOCKER} tag -f ${IMAGE} ${IMAGE_WEB}:${DATE}
-	${DOCKER} tag -f ${IMAGE} ${IMAGE_WEB}:${VERSION}
+	${DOCKER} tag -f ${IMAGE} ${IMAGE}:${DATE}
+	${DOCKER} tag -f ${IMAGE} ${IMAGE}:${VERSION}
 	${DOCKER} push ${IMAGE}:${VERSION}
 	${DOCKER} push ${IMAGE}:${DATE}
 	${DOCKER} push ${IMAGE}:latest
